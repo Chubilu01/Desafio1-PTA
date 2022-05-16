@@ -2,8 +2,6 @@ body {
     margin: 0;
     background: #FAFAFA;
     height: 100vh;
-    display: grid;
-    grid-template-rows: 199px cover 155.02px;
 }
 
 header {
