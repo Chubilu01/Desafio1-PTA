@@ -1,13 +1,16 @@
 body {
-    margin: 0 0 0 0;
+    margin: 0;
     background: #FAFAFA;
     height: 100vh;
+    display: grid;
+    grid-template-rows: 199px cover 155.02px;
 }
 
 header {
     background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
-    border-radius: 0px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 0;
+    overflow: auto;
 }
 
 nav {
@@ -17,10 +20,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 199px;
+    padding: 0 10% 0 15%;
+    overflow: auto;
 }
 
 #logo {
-    margin: 0 0 0 114px;
     width: 120px;
     height: 119px;
 }
@@ -28,7 +32,6 @@ nav {
 .searchbar {
     width: 450px;
     height: 61px;
-    margin: 0 114.5px 0 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,6 +58,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .container {
@@ -64,11 +68,12 @@ section {
     grid-row-gap: 32px;
     grid-column-gap: 32px;
     margin: 80px 0 77.98px 0;
+    overflow: auto;
 }
 
 .big-item {
     background: #FFFFFF;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     border-radius: 16px;
     width: 318px;
     height: 512px;
@@ -79,7 +84,7 @@ section {
     justify-content: center;
     align-items: center;
     background: #FFFFFF;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
     border-radius: 16px;
     width: 240px;
     height: 240px;
@@ -95,7 +100,7 @@ section {
     height: 39px;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 32px;
     line-height: 39px;
     color: #292929;
@@ -193,4 +198,167 @@ footer {
     font-size: 14px;
     line-height: 17px;
     color: #292929;
+}
+
+@media only screen and (max-width: 1300px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 318px 240px;
+        grid-template-rows: 240px 240px 240px 240px;
+        grid-row-gap: 32px;
+        grid-column-gap: 32px;
+        margin: 80px 0 77.98px 0;
+    }
+
+    .item-4 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        margin-left: -78px;
+    }
+    
+    .item-5 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4; 
+    }
+    
+    .item-6 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;  
+    }
+}
+
+@media only screen and (max-width: 950px) { 
+    
+    header {
+        height: 129.42px;
+    }
+    
+    nav {
+        height: 129.42px;
+    }
+
+    #input {
+        display: none;
+    }
+
+    .searchbar {
+        height: 0;
+        width: 0;
+        justify-content: center;
+        padding: 19px 19px 19px 19px;
+        border: 0.334358px solid rgba(96, 96, 96, 0.3);
+        border-radius: 8px;
+    }
+
+    #search-icon {
+        height: 13px;
+        width: 13px;
+    }
+
+    #logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .big-item {
+        height: 283px;
+        width: 175px;
+    }
+
+    .big-img {
+        height: 150px;
+        width: 150px;
+        margin: 13px 13px 17px 13px;
+    }
+
+    .item-name {
+        width: 150px;
+        margin: 0 13px 4px 13px;
+        width: 149.19px;
+        height: 22px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.6814px;
+        line-height: 22px;
+        color: #292929;
+    }
+
+    .item-description {
+        width: 150px;
+        margin: 0 13px 17px 13px;
+        height: 22px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 8.84068px;
+        line-height: 11px;
+        color: #606060;
+    }
+
+    .item-price {
+        height: 18px;
+        width: 51px;
+        font-size: 13.261px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13.261px;
+        line-height: 16px;
+        color: #000000;
+        padding: 3.5px;
+        margin: 0 104.5px 13px 13px;
+    }
+
+    .small-item {
+        width: 132px;
+        height: 132px;
+    }
+
+    .small-img {
+        width: 106.09px;
+        height: 106.09px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 176px 133px;
+        grid-template-rows: 133px 133px 133px 133px;
+        margin: 41px 0 38px 0;
+        grid-row-gap: 18px;
+        grid-column-gap: 18px;
+        margin: 40px 0 37px 0;
+    }
+
+    .item-4 {
+        margin-left: -43px;
+    }
+
+    #footer-img {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 128px;
+    }
+
+    .footer-icons {
+        width: auto;
+        gap: 30px;
+    }
+
+    .icons {
+        width: 25px;
+        height: 25px;
+    }
+
+    #footer-text {
+        text-align: center;
+        width: 217px;
+        font-size: 12px;
+    }
 }
